@@ -75,6 +75,7 @@ Stack controls in `skhd/skhdrc`:
 - `skhd/skhdrc`: stack-related yabai hotkeys.
 - `borders/bordersrc`: green active-window border config.
 - `scripts/start_borders.sh`: starts/restarts green active-window border.
+- `launch_agents/com.karabiner.borders.plist`: user LaunchAgent that keeps `borders` running.
 - `scripts/install_window_tools.sh`: installs yabai, skhd, and borders with Homebrew.
 
 ## Apply local config
@@ -113,6 +114,8 @@ After `borders` is installed:
 ```
 
 Expected result: focused window has a bright green border. Unfocused windows have no visible border.
+
+`scripts/start_borders.sh` installs `launch_agents/com.karabiner.borders.plist` into `~/Library/LaunchAgents` so macOS keeps the border process alive.
 
 If nothing appears:
 
