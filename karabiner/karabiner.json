@@ -18,7 +18,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/hyper_overlay.sh show"
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/hyper_overlay.sh show hyper"
                   },
                   {
                     "key_code": "left_shift",
@@ -27,6 +27,36 @@
                       "left_control",
                       "left_option"
                     ]
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/hyper_overlay.sh hide"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Use International 1 as Fn and show a hold overlay.",
+            "manipulators": [
+              {
+                "description": "Change international1 to fn.",
+                "from": {
+                  "key_code": "international1",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/hyper_overlay.sh show FN"
+                  },
+                  {
+                    "key_code": "fn"
                   }
                 ],
                 "to_after_key_up": [
@@ -90,6 +120,124 @@
                     "modifiers": [
                       "left_option",
                       "left_shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+J sends Left.",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+L sends Right.",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+I sends Up.",
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+K sends Down.",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+' sends Fn+Delete.",
+                "from": {
+                  "key_code": "quote",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "fn"
                     ]
                   }
                 ],

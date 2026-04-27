@@ -7,8 +7,11 @@ This repo contains the local keyboard and window-management setup for this Mac.
 - `Caps Lock` acts as the hyper key: `command + control + option + shift`.
 - `Hyper + Q` sends `Option + Shift + Left Arrow`.
 - `Hyper + E` sends `Option + Shift + Right Arrow`.
+- `Hyper + J/L/I/K` sends left/right/up/down arrows.
+- `Hyper + '` sends `Fn + Delete`.
 - `Hyper + M` toggles yabai focus-follows-mouse mode.
 - Holding the hyper key shows `hyper` near the bottom center of the screen.
+- Pressing `International 1` sends `Fn` and shows `FN` near the bottom center of the screen.
 - yabai, skhd, and JankyBorders are installed/configured by `scripts/install_window_tools.sh`.
 
 ## Apply local config

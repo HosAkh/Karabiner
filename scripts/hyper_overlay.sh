@@ -13,6 +13,8 @@ is_running() {
 
 case "${1:-}" in
   show)
+    text="${2:-hyper}"
+
     if is_running; then
       exit 0
     fi
@@ -22,7 +24,7 @@ case "${1:-}" in
       /usr/bin/clang "$source_file" -framework Cocoa -o "$binary"
     fi
 
-    "$binary" >/dev/null 2>&1 &
+    "$binary" "$text" >/dev/null 2>&1 &
     echo "$!" > "$pid_file"
     ;;
   hide)
@@ -32,7 +34,7 @@ case "${1:-}" in
     rm -f "$pid_file"
     ;;
   *)
-    echo "usage: $0 show|hide" >&2
+    echo "usage: $0 show [text]|hide" >&2
     exit 2
     ;;
 esac

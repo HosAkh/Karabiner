@@ -1,7 +1,9 @@
 #import <Cocoa/Cocoa.h>
 
-int main(void) {
+int main(int argc, const char *argv[]) {
   @autoreleasepool {
+    NSString *text = argc > 1 ? [NSString stringWithUTF8String:argv[1]] : @"hyper";
+
     [NSApplication sharedApplication];
     [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
 
@@ -30,7 +32,7 @@ int main(void) {
     [[container layer] setCornerRadius:14.0];
     [[container layer] setBackgroundColor:[[NSColor colorWithCalibratedWhite:0.0 alpha:0.72] CGColor]];
 
-    NSTextField *label = [NSTextField labelWithString:@"hyper"];
+    NSTextField *label = [NSTextField labelWithString:text];
     [label setFont:[NSFont systemFontOfSize:24.0 weight:NSFontWeightSemibold]];
     [label setTextColor:[NSColor whiteColor]];
     [label setAlignment:NSTextAlignmentCenter];
