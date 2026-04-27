@@ -19,3 +19,5 @@ yabai -m config right_padding 8
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add title="Preferences$" manage=off
+
+yabai -m signal --add event=window_focused action="/Users/faranakakhtari/Documents/New\\ project/scripts/track_yabai_focus.sh \\$YABAI_WINDOW_ID"

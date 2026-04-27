@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 set -eu
+PATH="$HOME/.local/bin:$PATH"
+export PATH
 
 if command -v brew >/dev/null 2>&1; then
   brew_cmd=brew

@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+set -eu
+
+case "${1:-}" in
+  dia) app="Dia" ;;
+  messages) app="Messages" ;;
+  whatsapp) app="WhatsApp" ;;
+  slack) app="Slack" ;;
+  codex) app="Codex" ;;
+  *) echo "usage: $0 dia|messages|whatsapp|slack|codex" >&2; exit 2 ;;
+esac
+
+open -a "$app"

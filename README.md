@@ -12,7 +12,9 @@ This repo stores and applies config. System tools still need to be installed on 
 - skhd
 - JankyBorders (`borders`)
 
-If active windows do not have a green outline, `borders` is either not installed, not running, or missing Accessibility permission.
+If active windows do not have a green outline, `borders` is either not installed, not running, or macOS is blocking the overlay from drawing.
+
+This machine also supports a user-local `borders` install at `~/.local/bin/borders` when Homebrew is not available.
 
 ## Shortcuts
 
@@ -26,6 +28,20 @@ If active windows do not have a green outline, `borders` is either not installed
 - `Hyper + K` sends `Down Arrow`.
 - `Hyper + '` sends `Fn + Delete`.
 - `Hyper + M` toggles yabai focus-follows-mouse mode.
+- `Hyper + 2` lays out the current active window and previous active window side by side.
+- `Hyper + 3` lays out the current active window and two previous active windows in three columns.
+- `Hyper + 4` lays out the current active window and three previous active windows in a 2x2 grid.
+- `Hyper + R` rotates window positions inside the last `Hyper + 2/3/4` layout.
+- `Hyper + A` enters the app launcher layer.
+
+App launcher layer after pressing `Hyper + A`:
+
+- `D`: open Dia.
+- `M`: open Messages.
+- `W`: open WhatsApp.
+- `S`: open Slack.
+- `C`: open Codex.
+- `Escape`: leave the layer without opening an app.
 
 ## On-screen overlays
 
@@ -51,6 +67,10 @@ Stack controls in `skhd/skhdrc`:
 - `scripts/hyper_overlay.sh`: starts/stops overlay text.
 - `scripts/HyperOverlay.m`: native macOS overlay app source.
 - `scripts/toggle_yabai_mouse_focus.sh`: toggles yabai focus-follows-mouse.
+- `scripts/track_yabai_focus.sh`: records recent yabai window focus history.
+- `scripts/arrange_recent_windows.sh`: lays out the most recently focused windows.
+- `scripts/rotate_recent_layout.sh`: rotates the last recent-window layout.
+- `scripts/open_app.sh`: opens apps from the Karabiner app launcher layer.
 - `yabai/yabairc`: yabai window-management config.
 - `skhd/skhdrc`: stack-related yabai hotkeys.
 - `borders/bordersrc`: green active-window border config.
@@ -80,6 +100,12 @@ The install script needs Homebrew. If Homebrew itself is not installed yet, inst
 
 ## Start the green active-window outline
 
+If Homebrew is not available, install `borders` from source:
+
+```sh
+./scripts/install_borders_from_source.sh
+```
+
 After `borders` is installed:
 
 ```sh
@@ -92,4 +118,4 @@ If nothing appears:
 
 - Confirm `borders` exists: `command -v borders`
 - Confirm it is running: `pgrep -fl borders`
-- Grant Accessibility permission in System Settings to `borders`.
+- Restart `borders`: `./scripts/start_borders.sh`

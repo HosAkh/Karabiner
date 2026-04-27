@@ -2,6 +2,8 @@
 set -eu
 
 repo_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+PATH="$HOME/.local/bin:$PATH"
+export PATH
 
 mkdir -p "$HOME/.config/karabiner" "$HOME/.config/yabai" "$HOME/.config/skhd" "$HOME/.config/borders"
 
