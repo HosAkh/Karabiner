@@ -21,9 +21,7 @@ fi
 yabai --start-service
 skhd --start-service
 
-if ! pgrep -x borders >/dev/null 2>&1; then
-  borders active_color=0xff00ff66 inactive_color=0x00000000 width=5.0 style=round hidpi=on &
-fi
+./scripts/start_borders.sh
 
 echo "Installed yabai, skhd, and borders."
 echo "Grant Accessibility permissions to yabai, skhd, and Karabiner-Elements if macOS asks."
