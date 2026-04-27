@@ -1,0 +1,145 @@
+{
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Use Caps Lock as hyper and show a hold overlay.",
+            "manipulators": [
+              {
+                "description": "Change caps_lock to command+control+option+shift.",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/hyper_overlay.sh show"
+                  },
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/hyper_overlay.sh hide"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Hyper shortcuts.",
+            "manipulators": [
+              {
+                "description": "Hyper+Q sends Option+Shift+Left.",
+                "from": {
+                  "key_code": "q",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "left_option",
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+E sends Option+Shift+Right.",
+                "from": {
+                  "key_code": "e",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "left_option",
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+M toggles yabai focus-follows-mouse.",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/toggle_yabai_mouse_focus.sh"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "fn_function_keys": [
+        {
+          "from": {
+            "key_code": "f6"
+          },
+          "to": [
+            {
+              "key_code": "f6"
+            }
+          ]
+        }
+      ],
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "country_code": 0,
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
+}

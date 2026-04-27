@@ -1,0 +1,5 @@
+# Yabai stack controls.
+shift + alt - s : yabai -m window --stack mouse
+shift + alt - x : yabai -m window --toggle split
+shift + alt - h : yabai -m window --focus stack.prev
+shift + alt - l : yabai -m window --focus stack.next
