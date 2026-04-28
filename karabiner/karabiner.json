@@ -385,16 +385,30 @@
                 "type": "basic"
               },
               {
-                "description": "Hyper+Left Click sends Hyper+[.",
+                "description": "Mouse Button 3 sends Command+R.",
                 "from": {
-                  "pointing_button": "button1",
+                  "pointing_button": "button3",
                   "modifiers": {
-                    "mandatory": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
-                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "r",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Mouse Button 4 sends Command+[.",
+                "from": {
+                  "pointing_button": "button4",
+                  "modifiers": {
                     "optional": [
                       "any"
                     ]
@@ -404,26 +418,17 @@
                   {
                     "key_code": "open_bracket",
                     "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
+                      "left_command"
                     ]
                   }
                 ],
                 "type": "basic"
               },
               {
-                "description": "Hyper+Right Click sends Hyper+].",
+                "description": "Mouse Button 5 sends Command+].",
                 "from": {
-                  "pointing_button": "button2",
+                  "pointing_button": "button5",
                   "modifiers": {
-                    "mandatory": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
-                    ],
                     "optional": [
                       "any"
                     ]
@@ -433,10 +438,7 @@
                   {
                     "key_code": "close_bracket",
                     "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option",
-                      "left_shift"
+                      "left_command"
                     ]
                   }
                 ],

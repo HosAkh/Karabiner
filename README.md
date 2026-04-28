@@ -33,8 +33,9 @@ This machine also supports a user-local `borders` install at `~/.local/bin/borde
 - `Hyper + 4` lays out the current active window and three previous active windows in a 2x2 grid.
 - `Hyper + R` rotates window positions inside the last `Hyper + 2/3/4` layout.
 - `Hyper + A` enters the app launcher layer.
-- `Hyper + Left Click` sends `Hyper + [`.
-- `Hyper + Right Click` sends `Hyper + ]`.
+- Mouse `Button 3` sends `Command + R`.
+- Mouse `Button 4` sends `Command + [`.
+- Mouse `Button 5` sends `Command + ]`.
 
 App launcher layer after pressing `Hyper + A`:
 
