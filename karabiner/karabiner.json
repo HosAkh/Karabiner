@@ -42,6 +42,42 @@
             "description": "Use International 1 as Fn and show a hold overlay.",
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "name": "international1_tapped",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "description": "Double-tap international1 to send Hyper+Space.",
+                "from": {
+                  "key_code": "international1",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "international1_tapped",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
                 "description": "Change international1 to fn.",
                 "from": {
                   "key_code": "international1",
@@ -57,6 +93,12 @@
                   },
                   {
                     "key_code": "fn"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "international1_tapped",
+                      "value": 1
+                    }
                   }
                 ],
                 "to_after_key_up": [
@@ -64,6 +106,24 @@
                     "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/hyper_overlay.sh hide"
                   }
                 ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "international1_tapped",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "international1_tapped",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
                 "type": "basic"
               }
             ]

@@ -20,6 +20,7 @@ This machine also supports a user-local `borders` install at `~/.local/bin/borde
 
 - `Caps Lock` acts as the hyper key: `command + control + option + shift`.
 - `International 1` acts as `Fn`.
+- Double-tap `International 1` quickly sends `Hyper + Space`.
 - `Hyper + Q` selects one word left: `Option + Shift + Left Arrow`.
 - `Hyper + E` selects one word right: `Option + Shift + Right Arrow`.
 - `Hyper + J` sends `Left Arrow`.
