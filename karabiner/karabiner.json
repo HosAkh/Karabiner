@@ -503,6 +503,23 @@
                   }
                 ],
                 "type": "basic"
+              },
+              {
+                "description": "Mouse Button 6 sends Command.",
+                "from": {
+                  "pointing_button": "button6",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_command"
+                  }
+                ],
+                "type": "basic"
               }
             ]
           },
