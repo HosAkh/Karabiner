@@ -7,7 +7,8 @@ case "${1:-}" in
   whatsapp) app="WhatsApp" ;;
   slack) app="Slack" ;;
   codex) app="Codex" ;;
-  *) echo "usage: $0 dia|messages|whatsapp|slack|codex" >&2; exit 2 ;;
+  spark) app="Spark" ;;
+  *) echo "usage: $0 dia|messages|whatsapp|slack|codex|spark" >&2; exit 2 ;;
 esac
 
 open -a "$app"

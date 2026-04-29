@@ -46,6 +46,7 @@ App launcher layer after pressing `Hyper + A`:
 - `W`: open WhatsApp.
 - `S`: open Slack.
 - `C`: open Codex.
+- `E`: open Spark.
 - `Escape`: leave the layer without opening an app.
 
 ## On-screen overlays

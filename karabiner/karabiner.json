@@ -564,6 +564,36 @@
                     "value": 1
                   }
                 ],
+                "description": "App layer E opens Spark.",
+                "from": {
+                  "key_code": "e",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/open_app.sh spark"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "app_launcher_layer",
+                      "value": 0
+                    }
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "app_launcher_layer",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "description": "App layer M opens Messages.",
                 "from": {
                   "key_code": "m",
