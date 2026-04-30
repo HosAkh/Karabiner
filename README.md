@@ -37,7 +37,7 @@ This machine also supports a user-local `borders` install at `~/.local/bin/borde
 - Mouse `Button 3` sends `Command + R`.
 - Mouse `Button 4` sends `Command + [`.
 - Mouse `Button 5` sends `Command + ]`.
-- Mouse `Button 6` acts as holdable `Command`.
+- Mouse `Button 6` sends `Command`.
 
 App launcher layer after pressing `Hyper + A`:
 

@@ -521,8 +521,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "left_command",
-                    "lazy": true
+                    "key_code": "left_command"
                   }
                 ],
                 "type": "basic"
