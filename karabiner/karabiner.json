@@ -503,9 +503,14 @@
                   }
                 ],
                 "type": "basic"
-              },
+              }
+            ]
+          },
+          {
+            "description": "Mouse modifier buttons.",
+            "manipulators": [
               {
-                "description": "Mouse Button 6 sends Command.",
+                "description": "Mouse Button 6 acts as holdable Command.",
                 "from": {
                   "pointing_button": "button6",
                   "modifiers": {
@@ -516,7 +521,8 @@
                 },
                 "to": [
                   {
-                    "key_code": "left_command"
+                    "key_code": "left_command",
+                    "lazy": true
                   }
                 ],
                 "type": "basic"
