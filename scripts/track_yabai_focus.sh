@@ -17,7 +17,7 @@ case "$window_id" in
   ''|*[!0-9]*) exit 0 ;;
 esac
 
-tmp_file="$history_file.tmp"
+tmp_file="$history_file.$$"
 {
   echo "$window_id"
   [ -f "$history_file" ] && grep -v "^$window_id$" "$history_file" || true

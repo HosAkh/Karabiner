@@ -21,6 +21,7 @@ This machine also supports a user-local `borders` install at `~/.local/bin/borde
 - `Caps Lock` acts as the hyper key: `command + control + option + shift`.
 - `International 1` acts as `Fn`.
 - Double-tap `International 1` quickly sends `Hyper + Space`.
+- `F13` sends the same action as double-tapping `International 1`.
 - `Hyper + Q` selects one word left: `Option + Shift + Left Arrow`.
 - `Hyper + E` selects one word right: `Option + Shift + Right Arrow`.
 - `Hyper + J` sends `Left Arrow`.
@@ -29,9 +30,14 @@ This machine also supports a user-local `borders` install at `~/.local/bin/borde
 - `Hyper + K` sends `Down Arrow`.
 - `Hyper + '` sends `Fn + Delete`.
 - `Hyper + M` toggles yabai focus-follows-mouse mode.
+- `Hyper + Y` toggles yabai on/off.
+- `Hyper + S` stacks the current window with the most recently focused window.
+- `Hyper + D` stacks the current window with the window under the mouse.
+- `Hyper + ,` focuses the previous window in a stack.
+- `Hyper + .` focuses the next window in a stack.
 - `Hyper + 2` lays out the current active window and previous active window side by side.
 - `Hyper + 3` lays out the current active window and two previous active windows in three columns.
-- `Hyper + 4` lays out the current active window and three previous active windows in a 2x2 grid.
+- `Hyper + 4` toggles yabai tiling/snapping for the current Space.
 - `Hyper + R` rotates window positions inside the last `Hyper + 2/3/4` layout.
 - `Hyper + A` enters the app launcher layer.
 - Mouse `Button 3` sends `Command + R`.
@@ -74,6 +80,7 @@ Stack controls in `skhd/skhdrc`:
 - `scripts/HyperOverlay.m`: native macOS overlay app source.
 - `scripts/toggle_yabai_mouse_focus.sh`: toggles yabai focus-follows-mouse.
 - `scripts/track_yabai_focus.sh`: records recent yabai window focus history.
+- `hammerspoon/init.lua`: draws clickable yabai stack badges and syncs stacked window frames.
 - `scripts/arrange_recent_windows.sh`: lays out the most recently focused windows.
 - `scripts/rotate_recent_layout.sh`: rotates the last recent-window layout.
 - `scripts/open_app.sh`: opens apps from the Karabiner app launcher layer.

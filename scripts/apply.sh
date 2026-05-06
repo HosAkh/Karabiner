@@ -5,12 +5,13 @@ repo_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 PATH="$HOME/.local/bin:$PATH"
 export PATH
 
-mkdir -p "$HOME/.config/karabiner" "$HOME/.config/yabai" "$HOME/.config/skhd" "$HOME/.config/borders"
+mkdir -p "$HOME/.config/karabiner" "$HOME/.config/yabai" "$HOME/.config/skhd" "$HOME/.config/borders" "$HOME/.hammerspoon"
 
 cp "$repo_dir/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
 cp "$repo_dir/yabai/yabairc" "$HOME/.config/yabai/yabairc"
 cp "$repo_dir/skhd/skhdrc" "$HOME/.config/skhd/skhdrc"
 cp "$repo_dir/borders/bordersrc" "$HOME/.config/borders/bordersrc"
+cp "$repo_dir/hammerspoon/init.lua" "$HOME/.hammerspoon/init.lua"
 
 chmod +x "$HOME/.config/yabai/yabairc"
 chmod +x "$HOME/.config/borders/bordersrc"

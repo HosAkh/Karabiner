@@ -3,6 +3,10 @@
 int main(int argc, const char *argv[]) {
   @autoreleasepool {
     NSString *text = argc > 1 ? [NSString stringWithUTF8String:argv[1]] : @"hyper";
+    NSTimeInterval maxLifetime = argc > 2 ? atof(argv[2]) : 6.0;
+    if (maxLifetime <= 0.0) {
+      maxLifetime = 6.0;
+    }
 
     [NSApplication sharedApplication];
     [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
@@ -42,6 +46,10 @@ int main(int argc, const char *argv[]) {
     [container addSubview:label];
     [panel setContentView:container];
     [panel orderFrontRegardless];
+
+    [NSTimer scheduledTimerWithTimeInterval:maxLifetime repeats:NO block:^(__unused NSTimer *timer) {
+      [NSApp terminate:nil];
+    }];
 
     [NSApp run];
   }

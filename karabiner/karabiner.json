@@ -42,6 +42,29 @@
             "description": "Use International 1 as Fn and show a hold overlay.",
             "manipulators": [
               {
+                "description": "F13 sends the same action as double-tapping International 1.",
+                "from": {
+                  "key_code": "f13",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
                     "name": "international1_tapped",
@@ -327,6 +350,121 @@
                 "type": "basic"
               },
               {
+                "description": "Hyper+Y toggles yabai on/off.",
+                "from": {
+                  "key_code": "y",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/yabai_control.sh toggle"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+S stacks the focused window with the most recently focused window.",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/stack_recent_window.sh"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+D stacks the focused window with the window under the mouse.",
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/stack_mouse_window.sh"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+Comma focuses the previous window in a stack.",
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/yabai_stack_focus.sh prev"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Hyper+Period focuses the next window in a stack.",
+                "from": {
+                  "key_code": "period",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/yabai_stack_focus.sh next"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
                 "description": "Hyper+2 lays out current and previous active windows side by side.",
                 "from": {
                   "key_code": "2",
@@ -373,7 +511,7 @@
                 "type": "basic"
               },
               {
-                "description": "Hyper+4 lays out current and three previous active windows in quarters.",
+                "description": "Hyper+4 toggles yabai tiling/snapping for the current Space.",
                 "from": {
                   "key_code": "4",
                   "modifiers": {
@@ -390,7 +528,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/arrange_recent_windows.sh 4"
+                    "shell_command": "/Users/faranakakhtari/Documents/New\\ project/scripts/toggle_yabai_tiling.sh"
                   }
                 ],
                 "type": "basic"

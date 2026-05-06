@@ -1,5 +1,6 @@
 # Yabai stack controls.
-shift + alt - s : yabai -m window --stack mouse
+shift + alt - s : /Users/faranakakhtari/Documents/New\ project/scripts/stack_mouse_window.sh
+shift + alt - r : /Users/faranakakhtari/Documents/New\ project/scripts/stack_recent_window.sh
 shift + alt - x : yabai -m window --toggle split
 shift + alt - h : yabai -m window --focus stack.prev
 shift + alt - l : yabai -m window --focus stack.next
