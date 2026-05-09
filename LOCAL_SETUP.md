@@ -168,4 +168,4 @@ git push origin main
 
 ---
 
-**Ready to work!** All files have been pulled and are available locally in `/home/runner/work/Karabiner/Karabiner`
+**Ready to work!** All files have been pulled and are available locally in your cloned repository directory.
