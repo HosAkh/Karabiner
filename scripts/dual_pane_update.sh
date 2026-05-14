@@ -79,12 +79,12 @@ fi
 
 if [ "$last_focused_slot" = "a" ]; then
   restore_window "$slot_a_id" "$slot_a_orig"
-  yabai -m window "$focused_id" --grid 1:8:0:0:3:1 >/dev/null 2>&1 || true
+  yabai -m window "$focused_id" --grid 1:8:1:0:3:1 >/dev/null 2>&1 || true
   write_pane "$focused_id" "$slot_b_id" "$new_orig" "$slot_b_orig" "a"
   log "slot_a replaced with $focused_id"
 else
   restore_window "$slot_b_id" "$slot_b_orig"
-  yabai -m window "$focused_id" --grid 1:8:3:0:3:1 >/dev/null 2>&1 || true
+  yabai -m window "$focused_id" --grid 1:8:4:0:3:1 >/dev/null 2>&1 || true
   write_pane "$slot_a_id" "$focused_id" "$slot_a_orig" "$new_orig" "b"
   log "slot_b replaced with $focused_id"
 fi

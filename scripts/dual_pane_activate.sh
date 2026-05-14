@@ -84,11 +84,11 @@ if [ "$is_b_floating" != "true" ]; then
   yabai -m window "$slot_b" --toggle float >/dev/null 2>&1 || true
 fi
 
-# Left pane: cols 0-2 of 8 (3/8 width); right pane: cols 3-5 of 8 (3/8 width)
+# Centered: 1/8 margin | left 3/8 | right 3/8 | 1/8 margin
 # Small sleep needed between commands — yabai drops rapid sequential moves
-yabai -m window "$slot_a" --grid 1:8:0:0:3:1 >/dev/null 2>&1 || true
+yabai -m window "$slot_a" --grid 1:8:1:0:3:1 >/dev/null 2>&1 || true
 sleep 0.1
-yabai -m window "$slot_b" --grid 1:8:3:0:3:1 >/dev/null 2>&1 || true
+yabai -m window "$slot_b" --grid 1:8:4:0:3:1 >/dev/null 2>&1 || true
 log "grid commands issued"
 
 tmp="$pane_file.$$"
