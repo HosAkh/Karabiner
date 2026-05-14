@@ -1,3 +1,6 @@
+# Dual-pane workspace (Meh = ctrl + shift + alt): toggle with Meh+2
+ctrl + shift + alt - 2 : /Users/faranakakhtari/Documents/repos/Karabiner/scripts/dual_pane_toggle.sh
+
 # Yabai stack controls.
 shift + alt - s : /Users/faranakakhtari/Documents/New\ project/scripts/stack_mouse_window.sh
 shift + alt - r : /Users/faranakakhtari/Documents/New\ project/scripts/stack_recent_window.sh
